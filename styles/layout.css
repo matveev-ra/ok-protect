@@ -529,126 +529,69 @@ a.btn-callback span {
 }
 
 .YurUslugi__Item {
+  background: #2c80b8;
   position: relative;
   width: 48.7%;
   max-width: 555px;
   font-size: 0;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
-.YurUslugi__Item:hover .imgbg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0px;
-  background: rgba(44, 128, 184, 0.5);
-  z-index: 1;
-}
-
-.YurUslugi__Item:hover .YurUslugi__hd {
-  position: absolute;
-  top: 38%;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  -webkit-animation: anim 1s  ease-out;
-  animation: anim 1s  ease-in-out;
-}
-
-.YurUslugi__Item:hover .YurUslugi__title {
-  position: static;
-  background: rgba(44, 128, 184, 0.5);
-}
-
-.YurUslugi__Item:hover .YurUslugi__hdsub {
-  opacity: 1;
-  visibility: visible;
-}
-
-.YurUslugi .img {
+.YurUslugi__img {
   position: relative;
-}
-
-.YurUslugi__title {
-  height: auto;
-  max-width: 555px;
-  background: #2c80b8;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  padding: 5px 0;
-  position: relative;
-  margin: 0 auto;
 }
 
 .YurUslugi__hd {
   font-family: CeraPro-Bold;
   font-size: 21px;
-  line-height: 25.2px;
+  line-height: 43px;
   text-align: center;
   color: #fff;
-  position: absolute;
-  top: 38%;
-  left: 0;
-  right: 0;
+  height: 43px;
 }
 
-.YurUslugi__hdsub {
-  padding: 5px;
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
+.YurUslugi__price {
+  padding: 20px;
 }
 
-.YurUslugi__hdsub a {
+.YurUslugi__price .e {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   font-family: CeraPro-Regular;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 21.6px;
   color: #fff;
-  text-decoration: none;
+  text-align: left;
+  margin-bottom: 15px;
 }
 
-.YurUslugi__hdsub a + a {
-  margin-left: 5px;
+.YurUslugi__price .e .title {
+  width: 78%;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
 }
 
-.YurUslugi__hdsub a + a:before {
-  content: "";
-  background: url(../images/row.png) left 4px no-repeat;
-  width: 6px;
-  height: 13px;
-  display: inline-block;
-  margin-right: 5px;
+.YurUslugi__price .e .title .hd {
+  font-family: 'CeraPro-Bold';
+  font-size: inherit;
+  line-height: inherit;
 }
 
-.YurUslugi__hdsub a:hover {
-  color: #3A576B;
-  text-decoration: underline;
+.YurUslugi__price .e .sum {
+  width: 20%;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-align: right;
 }
 
 @-webkit-keyframes anim {
@@ -688,12 +631,21 @@ a.btn-callback span {
 
 .Block2 {
   width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 
 .HDmain2 {
   position: relative;
   text-align: center;
+}
+
+.HDmain2.HDmain2-white span {
+  color: #fff;
+  background: #80c2ed;
+}
+
+.HDmain2.HDmain2-white:after {
+  background: #fff;
 }
 
 .HDmain2 span {
@@ -735,6 +687,15 @@ section .HDmain2 {
   justify-content: space-between;
 }
 
+.Whywe .Img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .Whywe .BL {
   width: 49%;
 }
@@ -751,7 +712,7 @@ section .HDmain2 {
 }
 
 .Сause__e {
-  width: 48%;
+  width: 23%;
   height: 262px;
   border: 1.5px solid #2c80b8;
   margin-bottom: 19px;
@@ -775,7 +736,6 @@ section .HDmain2 {
 
 .Forma1 {
   background: #80c2ed;
-  margin-bottom: 19px;
   padding: 25px 30px;
 }
 
@@ -927,6 +887,13 @@ section .HDmain2 {
   height: 25px;
 }
 
+.Block3 {
+  width: 100%;
+  background: #80c2ed;
+  padding: 40px 0;
+  margin-bottom: 90px;
+}
+
 .Reviews {
   margin-bottom: 60px;
 }
@@ -944,7 +911,7 @@ section .HDmain2 {
 }
 
 .ReviewsE + .ReviewsE {
-  border-top: 1.5px solid #3a576b;
+  border-top: 1.5px solid #fff;
   padding-top: 45px;
   margin-top: 35px;
 }
@@ -954,9 +921,10 @@ section .HDmain2 {
   position: absolute;
   top: -29px;
   right: 15%;
-  background: url("../images/qute.jpg") left 0px no-repeat;
+  background: url("../images/quite.png") center 14px no-repeat;
   width: 61px;
   height: 60px;
+  background-color: #80c2ed;
 }
 
 .ReviewsE__Avatar {
@@ -968,7 +936,26 @@ section .HDmain2 {
 }
 
 .ReviewsE__Avatar .img {
-  margin-bottom: 20px;
+  height: 107px;
+  width: 107px;
+  border-radius: 52px;
+  background: #2c80b8;
+  margin: 0 auto 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: CeraPro-Black;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 57.6px;
+  text-align: center;
+  color: #fff;
 }
 
 .ReviewsE__Avatar .name {
@@ -976,7 +963,7 @@ section .HDmain2 {
   font-size: 18px;
   line-height: 21.6px;
   text-align: center;
-  color: #3a576b;
+  color: #fff;
 }
 
 .ReviewsE__Avatar .date {
@@ -984,7 +971,7 @@ section .HDmain2 {
   font-size: 18px;
   line-height: 21.6px;
   text-align: center;
-  color: #3a576b;
+  color: #fff;
 }
 
 .ReviewsE__text {
@@ -998,12 +985,16 @@ section .HDmain2 {
   font-size: 18px;
   line-height: 21.6px;
   text-align: left;
-  color: #1d1d1b;
+  color: #fff;
 }
 
 .All-link {
   text-align: right;
   margin-top: 20px;
+}
+
+.All-link.All-link-white a {
+  color: #fff;
 }
 
 .All-link a {
@@ -2169,6 +2160,158 @@ ul.foot li a:hover {
   top: -120px;
 }
 
+.OurDela {
+  margin-bottom: 90px;
+}
+
+.OurDela .HDmain2 {
+  margin-bottom: 40px;
+}
+
+.OurDela__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border: 1px solid #2c80b8;
+  margin-bottom: 20px;
+}
+
+.OurDela__text {
+  width: 70%;
+  text-align: center;
+  padding: 20px;
+}
+
+.OurDela__text .hd {
+  font-family: CeraPro-Bold;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21.6px;
+  color: #3a576b;
+  margin-bottom: 15px;
+}
+
+.OurDela__text .desc {
+  font-family: CeraPro-Regular;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21.6px;
+  color: #1d1d1b;
+}
+
+.OurDela__info {
+  width: 28%;
+  padding: 20px;
+  background: #2c80b8;
+  font-family: CeraPro-Regular;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21.6px;
+  text-align: center;
+  color: #fff;
+}
+
+.OurDela__info .hd {
+  font-family: CeraPro-Bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.OurDela__info strong {
+  font-family: CeraPro-Bold;
+  display: block;
+}
+
+.Help {
+  margin-bottom: 90px;
+}
+
+.FormaM {
+  width: 600px;
+  margin: 0px auto;
+  position: relative;
+  padding: 30px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 16px #fff;
+  box-shadow: 0 0 16px #fff;
+}
+
+.FormaM > .close {
+  font-size: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: -7px;
+  right: 5px;
+  font-weight: normal;
+  opacity: 0.6;
+}
+
+.FormaM > .close:hover {
+  opacity: 1;
+  text-shadow: 0 1px 3px #999;
+}
+
+.ModalH {
+  margin-bottom: 30px;
+}
+
+.ModalH > .hd {
+  font-family: CeraPro-Bold;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21.6px;
+  text-align: center;
+  color: #3a576b;
+}
+
+.FormaM > form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.FormaM > form > .e {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.FormaM > form > .e > input {
+  background: #ececec;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 38px;
+  padding-left: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.FormaM > form > button {
+  background: #ffe119;
+  display: block;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 296px;
+  height: 40px;
+  border: none;
+  margin: 0 auto 20px;
+  color: #3e2502;
+  font-size: 19px;
+  text-transform: uppercase;
+  line-height: 40px;
+  text-shadow: 0 1px 1px #999;
+}
+
+.FormaM > form > button:hover {
+  -webkit-box-shadow: 0 0 6px #999;
+  box-shadow: 0 0 6px #999;
+}
+
 /*# sourceMappingURL=layout.css.map */
 
 @media all and (min-width: 850px) {
@@ -2369,6 +2512,11 @@ ul.foot li a:hover {
     margin: 0 auto 20px;
   }
 
+  .YurUslugi__price .e {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
   .Yurtext p {
     font-size: 16px;
     line-height: 19px;
@@ -2377,14 +2525,29 @@ ul.foot li a:hover {
   .HDmain2 span {
     font-size: 20px;
     line-height: 24px;
+    padding: 0;
+  }
+
+  .HDmain2:after {
+    background: none;
   }
 
   section .HDmain2 {
     margin-bottom: 30px;
   }
 
+  .Whywe .Img {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
   .Whywe .BL {
     width: 100%;
+  }
+
+  .Сause__e {
+    width: 48%;
   }
 
   .FormaBig .hd {
@@ -2501,6 +2664,26 @@ ul.foot li a:hover {
     font-size: 16px;
     line-height: 18px;
   }
+
+  .OurDela__text {
+    width: 100%;
+  }
+
+  .OurDela__text .hd {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .OurDela__text .desc {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .OurDela__info {
+    font-size: 16px;
+    line-height: 18px;
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -2516,9 +2699,14 @@ ul.foot li a:hover {
     line-height: 25px;
   }
 
-  .HDmain2 span {
-    font-size: 18px;
-    line-height: 20px;
+  .ReviewsE__Avatar .name {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .ReviewsE__Avatar .date {
+    font-size: 16px;
+    line-height: 18px;
   }
 
   .FormaBig__in {
@@ -2561,6 +2749,21 @@ ul.foot li a:hover {
   }
 }
 
+@media all and (max-width: 500px) {
+  .FormaM {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .FormaM > form > .e > input {
+    width: 90%;
+  }
+
+  .FormaM > form > button {
+    width: 90%;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .Forma1 {
     padding: 10px;
@@ -2576,6 +2779,7 @@ ul.foot li a:hover {
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
     margin-bottom: 20px;
+    margin-right: 0px;
   }
 
   .ReviewsE__text {
@@ -2628,10 +2832,6 @@ ul.foot li a:hover {
 }
 
 @media only screen and (max-width: 450px) {
-  .YurUslugi__Item:hover .YurUslugi__hd {
-    top: 20%;
-  }
-
   .BlContact-info .wrap .e {
     width: 100%;
     margin-bottom: 10px;

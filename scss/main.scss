@@ -420,140 +420,74 @@ a.btn-callback {
   }
   
   &__Item {
+    background: #2c80b8;
     position: relative;
     width: 48.7%;
     max-width: 555px;
     font-size: 0;
     text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-
-
-
-    // background: #2c80b8;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    // align-items: center;
 
     @include max-s(768px)  {
         width: 100%;
         margin: 0 auto 20px;
     }
-
-    &:hover {
-      // background: rgba(44, 128, 184, 0.5%);
-
-      .imgbg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0px;
-        background: rgba(44, 128, 184, 0.5%);
-        z-index: 1;
-      }
-      .YurUslugi__hd {
-        position: absolute;
-        top: 38%;
-        left: 0;
-        right: 0;
-        z-index: 2;
-        -webkit-animation: anim 1s  ease-out;
-       -moz-animation:    anim 1s  ease-in-out;
-        animation:         anim 1s  ease-in-out;
-        @include max-s(450px)  {
-          top: 20%;
-        }
-      }
-      .YurUslugi__title {
-        position: static;
-        background: rgba(44, 128, 184, 0.5%); 
-      } 
-      .YurUslugi__hdsub {
-        opacity: 1;
-        visibility: visible;
-      } 
-    }
   }
 
-  .img {
+  &__img {
     position: relative;
-  }
-
-  &__title {
-    height: auto;
-    max-width: 555px;
-    background: #2c80b8;
-    flex: 1 1 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-basis:auto;
-    padding: 5px 0;
-    position: relative;
-    margin: 0 auto;
-
-    @include max-s(768px)  {
-      
-    }
-    
   }
 
   &__hd {
     font-family: CeraPro-Bold;
     font-size: 21px;
-    line-height: 25.2px;
+    line-height: 43px;
     text-align: center;
     color: #fff;
-
-    // transition: anim 2s ease;
-    // -moz-transition: anim 2s ease;
-    // -webkit-transition: anim 2s ease;
-    // -o-transition: anim 2s ease;
-
-    // -webkit-animation: anim 2.5s  ease-out;
-    // -moz-animation:    anim 2.5s  ease-in-out;
-    // animation:         anim 2.5s  ease-in-out;
-    
-
-    position: absolute;
-    top: 38%;
-    left: 0;
-    right: 0;
-    
-    
+    height: 43px;
   }
 
-  &__hdsub {
-    // display: none;
-    padding: 5px;
-    text-align: center;
-    opacity: 0;
-    visibility:  hidden;
-
-    a {
+  &__price {
+    padding: 20px;
+    .e {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       font-family: CeraPro-Regular;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 21.6px;
       color: #fff;
-      text-decoration: none;
-     &+a {
-       margin-left: 5px;
-     } 
-     &+a:before {
-      content: "";
-      background: url(../images/row.png) left 4px no-repeat;
-      width: 6px;
-      height: 13px;
-      display: inline-block;
-      margin-right: 5px;
-      // padding-left: 10px;
-     }
+      text-align: left;
+      margin-bottom: 15px;
 
-      &:hover {
-        color: #3A576B;
-        text-decoration: underline;
+      @include max-s(768px)  {
+          font-size: 16px;
+          line-height: 18px;
+      }
+
+      .title {
+        width: 78%;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit; 
+        color: inherit;
+
+        .hd {
+          font-family: 'CeraPro-Bold';
+          font-size: inherit;
+          line-height: inherit; 
+        }
+      }
+      .sum {
+        width: 20%;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit; 
+        color: inherit;
+        text-align: right;
       }
     }
   }
@@ -580,13 +514,22 @@ a.btn-callback {
 }
 
 .Block2 {
-  width: 100%;margin-bottom: 60px;
+  width: 100%; margin-bottom: 90px;
 }
 
 .HDmain2 {
   position: relative;
   text-align: center;
- 
+
+  &.HDmain2-white {
+    span {
+      color: #fff;
+      background: #80c2ed;;
+    }
+    &:after  {
+      background: #fff;
+    }
+  }
   span {
     font-family: CeraPro-Bold;
     font-size: 24px;
@@ -600,11 +543,12 @@ a.btn-callback {
     @include max-s(768px)  {
       font-size: 20px;
       line-height: 24px;
+      padding: 0;
     }
-    @include max-s(540px)  {
-      font-size: 18px;
-      line-height: 20px;
-    }
+    // @include max-s(540px)  {
+    //   font-size: 18px;
+    //   line-height: 20px;
+    // }
   }
 
 
@@ -618,6 +562,9 @@ a.btn-callback {
     width: 70%;
     height: 1.5px;
     background: #3a576b;
+    @include max-s(768px)  {
+      background: none;
+    }
 
   }
 
@@ -636,14 +583,23 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  
 
+ .Img {
+    display: flex;
+    align-items: center;
+    
+    @include max-s(768px)  {
+        justify-content: center;
+    }
+  }
   .BL {
     width: 49%;
 
     @include max-s(768px)  {
       width: 100%;
     }
+
+    
   }
 }
 
@@ -653,7 +609,7 @@ section {
     justify-content: space-between;
     
 		&__e {
-      width: 48%;
+      width: 23%;
       // width: 262px;
       height: 262px;
       border: 1.5px solid #2c80b8;
@@ -662,6 +618,9 @@ section {
       padding: 5px 5px 10px;
       @include max-s(1070px)  {
         height: auto;
+      }
+      @include max-s(768px)  {
+        width: 48%;
       }
       @include max-s(460px)  {
         width: 100%;
@@ -697,7 +656,6 @@ section {
 
 .Forma1 {
     background: #80c2ed;
-    margin-bottom: 19px;
     padding: 25px 30px;
 
     @include max-s(500px)  {
@@ -801,6 +759,14 @@ section {
     }
 }
 
+
+.Block3 {
+  width: 100%;
+  background: #80c2ed;
+  padding: 40px 0;
+  margin-bottom: 90px;  
+}
+
 .Reviews {
   margin-bottom: 60px;
 }
@@ -816,7 +782,7 @@ section {
     }
     
     &+& {
-      border-top: 1.5px solid #3a576b;   
+      border-top: 1.5px solid #fff;   
       padding-top: 45px;
       margin-top: 35px;
     }
@@ -826,9 +792,10 @@ section {
       position: absolute;
       top: -29px;
       right: 15%;
-      background: url('../images/qute.jpg') left 0px no-repeat;
+      background: url('../images/quite.png') center 14px no-repeat;
       width: 61px;
       height: 60px;
+      background-color: #80c2ed;
     }
  
     &__Avatar {
@@ -839,10 +806,25 @@ section {
       @include max-s(500px)  {
         flex: 1 1 100%;
         margin-bottom: 20px;
+        margin-right: 0px;
       }
       
       .img {
-        margin-bottom: 20px;
+        height: 107px;
+        width: 107px;
+        border-radius: 52px;
+        background: #2c80b8;
+        margin:0 auto 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: CeraPro-Black;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 57.6px;
+        text-align: center;
+        color: #fff;
+
         
       }
       .name {
@@ -850,14 +832,22 @@ section {
         font-size: 18px;
         line-height: 21.6px;
         text-align: center;
-        color: #3a576b;
+        color: #fff;
+        @include max-s(540px)  {
+          font-size: 16px;
+          line-height: 18px;
+        }
       }
       .date {
         font-family: CeraPro-Medium Italic;
         font-size: 18px;
         line-height: 21.6px;
         text-align: center;
-        color: #3a576b;
+        color: #fff;
+        @include max-s(540px)  {
+          font-size: 16px;
+          line-height: 18px;
+        }
       }
     }
 
@@ -873,7 +863,7 @@ section {
         font-size: 18px;
         line-height: 21.6px;
         text-align: left;
-        color: #1d1d1b;
+        color: #fff;
         @include max-s(500px)  {
           font-size: 16px;
           line-height: 18px;
@@ -885,7 +875,11 @@ section {
 .All-link {
   text-align: right;
   margin-top: 20px;
-
+&.All-link-white {
+  a {
+    color: #fff;
+  }
+}
   a {
     display: block;
     font-family: CeraPro-Regular;
@@ -2004,15 +1998,183 @@ ul.foot {
 }
 
 
+.OurDela {
+  margin-bottom: 90px;
+
+  .HDmain2 {margin-bottom: 40px;}
+
+  &__Wrap {}
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid #2c80b8;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    width: 70%;
+    text-align: center;
+    padding: 20px;
+    @include max-s(768px)  {
+      width: 100%;
+    }
+    .hd {
+      font-family: CeraPro-Bold;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21.6px;
+      color: #3a576b;
+      margin-bottom: 15px;
+      @include max-s(768px)  {
+        font-size: 16px;
+      line-height: 18px; 
+      }
+
+    }
+    .desc {
+      font-family: CeraPro-Regular;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21.6px;
+      color: #1d1d1b; 
+      @include max-s(768px)  {
+        font-size: 16px;
+      line-height: 18px; 
+      }
+    }
+  }
+
+  &__info {
+    width: 28%;
+    padding: 20px;
+    background: #2c80b8;
+    font-family: CeraPro-Regular;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21.6px;
+    text-align: center;
+    color: #fff;
+
+    @include max-s(768px)  {
+      font-size: 16px;
+      line-height: 18px; 
+      width: 100%;
+    }
+
+    .hd {
+      font-family: CeraPro-Bold;
+      margin-bottom: 10px;
+      display: block;
+    }
+    strong {
+      font-family: CeraPro-Bold;
+      display: block;
+    }
+  }
+}
+
+.Help {
+  margin-bottom: 90px;
+}
 
 
 
 
 
+.FormaM {
+  width: 600px;
+  margin: 0px auto;
+  position: relative;
+  padding: 30px;
+  background: #fff;
+  // border-radius: 5px;
+  box-shadow: 0 0 16px #fff;
+}
+
+.FormaM>.close {
+  font-size: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: -7px;
+  right: 5px;
+  font-weight: normal;
+  opacity: 0.6
+}
+
+.FormaM>.close:hover {
+  opacity: 1;
+  text-shadow: 0 1px 3px #999;
+}
+
+.ModalH {
+  margin-bottom: 30px;
+}
+
+.ModalH>.hd {
+  font-family: CeraPro-Bold;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21.6px;
+  text-align: center;
+  color: #3a576b;
+
+}
+
+.FormaM>form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.FormaM>form>.e {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.FormaM>form>.e>input {
+  background: #ececec;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 38px;
+  padding-left: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center; 
+}
+
+.FormaM>form>button {
+  background: #ffe119;
+  display: block;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 296px;
+  height: 40px;
+  border: none;
+  margin: 0 auto 20px;
+  color: #3e2502;
+  font-size: 19px;
+  text-transform: uppercase;
+  line-height: 40px;
+  text-shadow: 0 1px 1px #999;
+}
+
+.FormaM>form>button:hover {
+  box-shadow: 0 0 6px #999;
+}
 
 
 
+@media all and  (max-width:500px) {
+ 
+  .FormaM {width: 90%;margin: 0 auto;}
+  .FormaM>form>.e>input {width: 90%;}
+  .FormaM>form>button {width: 90%;}
 
+}
 
 
 
