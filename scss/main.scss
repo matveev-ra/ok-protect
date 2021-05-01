@@ -43,6 +43,10 @@ section {
 .Logo {
   width: 32%;
   margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+
   @include max-s(992px) {
     width: 30%;
   }
@@ -50,7 +54,23 @@ section {
     width: 100%;
     text-align: center;
     margin-bottom: 10px;
+    justify-content: center ;
   }
+  a {
+    display: block;
+    font-size: 0;
+    margin-bottom: 2px;
+  }
+  .siteSubtitle {
+    font-family: CeraPro-Bold;
+    font-size: 9.23px;
+    line-height: 11.07px;
+    color: #1a4b6b;
+    text-align: center;
+    display: block;
+  }
+
+
 }
 
 .Top-phone {
@@ -187,6 +207,7 @@ a.btn-callback {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
+    padding: 0;
 
     @include max-s(850px)  {
        display: block;
@@ -660,9 +681,7 @@ section {
 
     @include max-s(500px)  {
       padding: 10px;
-
     }
-
 
 		&__hd {
 		  font-family: CeraPro-Bold;
@@ -673,9 +692,6 @@ section {
       color: #fff;
       margin-bottom: 20px;
 
-		}
-
-		&__in {
 		}
 
 		&__e {
@@ -714,6 +730,7 @@ section {
         background: #fff;
         padding: 15px;
       }
+
       textarea::placeholder {
         font-family: CeraPro-LightItalic;
         font-size: 18px;
@@ -721,6 +738,12 @@ section {
         color: #1d1d1b;
       }
 		}
+
+    .BtnSubmit {
+      @include max-s(768px)  {
+        padding: 40px 0; 
+      }
+    } 
 }
 
 .BtnSubmit {
@@ -1014,6 +1037,9 @@ section {
     width: 42%;
     margin: 0 auto;
     min-width: 300px;
+    @include max-s(768px)  {
+      padding: 40px 0; 
+    }
     @include max-s(540px)  {
       min-width: 100%;
     }
@@ -1358,10 +1384,34 @@ section {
 
 .logofoot {
   margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  
   @include max-s(768px)  {
     text-align: center; 
   }
+  a {
+    display: block;
+    font-size: 0;
+    margin-bottom: 2px;
+  }
+  .siteSubtitle {
+    font-family: CeraPro-Bold;
+    font-size: 9.23px;
+    line-height: 11.07px;
+    color: #fff;
+    text-align: center;
+    display: block;
+  }
 }
+
+
+
+
+
+
+
 
 .ContactF {
    flex: 1 1 33%;
@@ -1426,7 +1476,9 @@ flex: 0 0 33%;
 
 ul.foot {
   margin-bottom: 20px;
+  margin-left: 0;
   li {
+    list-style: none;
      a {
        font-family: CeraPro-Regular;
        font-size: 18px;
@@ -1542,6 +1594,10 @@ ul.foot {
   }
 
   &__text {
+    h2 {
+      padding-bottom: 15px;
+    }
+
     p {
       font-family: CeraPro-Regular;
       font-size: 18px;
@@ -1554,6 +1610,40 @@ ul.foot {
         line-height: 18px;
       }
     }
+
+    ol {
+      margin-left: 20px;
+      padding: 15px 0;
+      li {
+        font-family: CeraPro-Regular;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: left;
+        color: #3c3c3b;
+        @include max-s(768px)  {
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+    }
+
+    ul {
+      margin-left: 20px;
+      padding: 15px 0;
+      li {
+        font-family: CeraPro-Regular;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: left;
+        color: #3c3c3b;
+        list-style: disc;
+        @include max-s(768px)  {
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+    }
+
   }
 
 }
@@ -1664,15 +1754,28 @@ ul.foot {
     flex-wrap: nowrap;
     justify-content: space-between;
     margin-bottom: 25px;
+    @include max-s(768px)  {
+      flex-wrap: wrap;
+    }
   }
 
   &__Img {
-    flex: 1 0 360px;
+    flex: 0 0 360px;
     margin-right: 30px; 
+
+    @include max-s(768px)  {
+      flex: 1 0 100%;
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__info {
     flex: 1 1 auto;
+    @include max-s(768px)  {
+      flex: 1 0 100%;
+      padding-top: 20px;
+    }
   }
 
   &__hd {
@@ -1682,6 +1785,9 @@ ul.foot {
     text-align: left;
     color: #1d1d1b;
     margin-bottom: 18px;
+    @include max-s(768px)  {
+      text-align: center;
+    }
   }
 
   &__txt {
@@ -1843,52 +1949,57 @@ ul.foot {
 
 .Price-wrap {
 
-  .table {}
+ 
 
-  .HD {
-    font-family: CeraPro-Bold;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
-    text-align: left;
-    color: #3c3c3b;
-  }
-
-  .tr {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-  }
-
-  .td1 {
-    flex: 0 0 80%;
-    font-family: CeraPro-Regular;
-    font-size: 18px;
-    line-height: 24px;
-    text-align: left;
-    color: #3c3c3b;
-    padding-right: 10px;
-  }
-
-  .td2 {
-    flex: 0 0 20%;
-    font-family: CeraPro-Regular;
-    font-size: 18px;
-    line-height: 24px;
-    color: #3c3c3b;
-    text-align: center;
-    display: flex;
-    align-items: center;
-  }
-  .tdB {
-    font-family: CeraPro-Bold;
-  }
   .hr {
     height: 1px;
-    background:  #3a576b;
-    margin: 10px 0 15px ;
+    background: #3a576b;
+    margin: 10px 0 15px;
   }
 }
+
+ .table {
+
+   .HD {
+     font-family: CeraPro-Bold;
+     font-weight: normal;
+     font-size: 18px;
+     line-height: 24px;
+     text-align: left;
+     color: #3c3c3b;
+   }
+
+   .tr {
+     display: flex;
+     flex-wrap: nowrap;
+     justify-content: space-between;
+   }
+
+   .td1 {
+     flex: 0 0 80%;
+     font-family: CeraPro-Regular;
+     font-size: 18px;
+     line-height: 24px;
+     text-align: left;
+     color: #3c3c3b;
+     padding-right: 10px;
+   }
+
+   .td2 {
+     flex: 0 0 20%;
+     font-family: CeraPro-Regular;
+     font-size: 18px;
+     line-height: 24px;
+     color: #3c3c3b;
+     text-align: center;
+     display: flex;
+     align-items: center;
+   }
+
+   .tdB {
+     font-family: CeraPro-Bold;
+   }
+ }
 
 .Etapy {
   margin-bottom: 60px;
@@ -1970,14 +2081,45 @@ ul.foot {
   
   h2 {
     font-family: CeraPro-Bold;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 21.6px;
     text-align: left;
     color: #000;
     margin-top: 10px;
     margin-bottom: 15px;
   }
-
+  h3 {
+    font-family: CeraPro-Bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: left;
+    color: #3c3c3b;
+    padding: 10px 0;     
+  }
+  ol {
+    margin-left: 20px;
+    padding: 15px 0;
+    li {
+      font-family: CeraPro-Regular;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: left;
+      color: #3c3c3b;
+    }
+  }
+  ul {
+    margin-left: 20px;
+    padding: 15px 0;
+    li {
+      font-family: CeraPro-Regular;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: left;
+      color: #3c3c3b;
+      list-style: disc;
+    }
+  }
+ 
   p {
     font-family: CeraPro-Regular;
     font-size: 18px;
@@ -2017,8 +2159,10 @@ ul.foot {
     width: 70%;
     text-align: center;
     padding: 20px;
+
     @include max-s(768px)  {
       width: 100%;
+      order: 2;
     }
     .hd {
       font-family: CeraPro-Bold;
@@ -2061,6 +2205,7 @@ ul.foot {
       font-size: 16px;
       line-height: 18px; 
       width: 100%;
+      order: 1;
     }
 
     .hd {
@@ -2075,12 +2220,75 @@ ul.foot {
   }
 }
 
-.Help {
-  margin-bottom: 90px;
+.HeadBlock {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid #2c80b8;
+    margin-bottom: 20px;
+
+
+  &__title {
+    width: 70%;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+
+    @include max-s(768px)  {
+      width: 100%;
+      order: 2;
+    }
+    .hd {
+      font-family: CeraPro-Bold;
+      font-size: 24px;
+      line-height: 26px;
+      color: #2c80b8;
+      margin-bottom: 15px;
+      @include max-s(768px)  {
+        font-size: 20px;
+        line-height: 22px; 
+      }
+
+    }
+  }
+
+  &__tags {
+    width: 28%;
+    padding: 20px;
+    background: #2c80b8;
+    font-family: CeraPro-Regular;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21.6px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+
+    @include max-s(768px)  {
+      font-size: 16px;
+      line-height: 18px; 
+      width: 100%;
+      order: 1;
+    }
+
+    .hd {
+      font-family: CeraPro-Bold;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+  }
 }
 
 
 
+.Help {
+  margin-bottom: 90px;
+}
 
 
 .FormaM {
@@ -2166,6 +2374,42 @@ ul.foot {
   box-shadow: 0 0 6px #999;
 }
 
+
+
+.Other-public {
+  .hd {
+    font-family: CeraPro-Bold;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 21.6px;
+    text-align: center;
+    color: #3a576b;
+    @include max-s(768px)  {
+      font-size: 18px;
+      line-height: 21.6px;
+    }
+  }
+  &__link {
+    ul {
+      list-style: disc;
+      li {
+       
+        a {
+          font-family: CeraPro-Regular;
+          font-size: 18px;
+          line-height: 21.6px;
+          text-align: left;
+          color: #1a4b6b;
+          text-decoration: none; 
+   
+          &:hover {
+            text-decoration: underline;
+          }
+      }
+    }
+  }
+
+}
 
 
 @media all and  (max-width:500px) {

@@ -90,7 +90,7 @@ img {
 }
 
 a[href^="tel:"] {
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
@@ -102,8 +102,18 @@ p + p {
   padding-top: 15px;
 }
 
-ul {
-  list-style: none;
+h2 {
+  font-family: CeraPro-Bold;
+  font-size: 20px;
+  line-height: 21.6px;
+  color: #000;
+}
+
+h3 {
+  font-family: CeraPro-Bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #3c3c3b;
 }
 
 .flexC {
@@ -209,6 +219,29 @@ section {
 .Logo {
   width: 32%;
   margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+}
+
+.Logo a {
+  display: block;
+  font-size: 0;
+  margin-bottom: 2px;
+}
+
+.Logo .siteSubtitle {
+  font-family: CeraPro-Bold;
+  font-size: 9.23px;
+  line-height: 11.07px;
+  color: #1a4b6b;
+  text-align: center;
+  display: block;
 }
 
 .Top-phone {
@@ -349,6 +382,7 @@ a.btn-callback span {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  padding: 0;
 }
 
 .Topmenu ul li {
@@ -1526,6 +1560,29 @@ section .HDmain2 {
 
 .logofoot {
   margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+}
+
+.logofoot a {
+  display: block;
+  font-size: 0;
+  margin-bottom: 2px;
+}
+
+.logofoot .siteSubtitle {
+  font-family: CeraPro-Bold;
+  font-size: 9.23px;
+  line-height: 11.07px;
+  color: #fff;
+  text-align: center;
+  display: block;
 }
 
 .ContactF {
@@ -1609,6 +1666,11 @@ section .HDmain2 {
 
 ul.foot {
   margin-bottom: 20px;
+  margin-left: 0;
+}
+
+ul.foot li {
+  list-style: none;
 }
 
 ul.foot li a {
@@ -1717,12 +1779,43 @@ ul.foot li a:hover {
   font-size: 0;
 }
 
+.Firstscreen__text h2 {
+  padding-bottom: 15px;
+}
+
 .Firstscreen__text p {
   font-family: CeraPro-Regular;
   font-size: 18px;
   line-height: 22px;
   text-align: left;
   color: #3c3c3b;
+}
+
+.Firstscreen__text ol {
+  margin-left: 20px;
+  padding: 15px 0;
+}
+
+.Firstscreen__text ol li {
+  font-family: CeraPro-Regular;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+  color: #3c3c3b;
+}
+
+.Firstscreen__text ul {
+  margin-left: 20px;
+  padding: 15px 0;
+}
+
+.Firstscreen__text ul li {
+  font-family: CeraPro-Regular;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+  color: #3c3c3b;
+  list-style: disc;
 }
 
 .Uslugi {
@@ -1819,9 +1912,9 @@ ul.foot li a:hover {
 }
 
 .Uslugi2__Img {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0 360px;
-  flex: 1 0 360px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 360px;
+  flex: 0 0 360px;
   margin-right: 30px;
 }
 
@@ -1978,7 +2071,13 @@ ul.foot li a:hover {
   margin-bottom: 60px;
 }
 
-.Price-wrap .HD {
+.Price-wrap .hr {
+  height: 1px;
+  background: #3a576b;
+  margin: 10px 0 15px;
+}
+
+.table .HD {
   font-family: CeraPro-Bold;
   font-weight: normal;
   font-size: 18px;
@@ -1987,7 +2086,7 @@ ul.foot li a:hover {
   color: #3c3c3b;
 }
 
-.Price-wrap .tr {
+.table .tr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1998,7 +2097,7 @@ ul.foot li a:hover {
   justify-content: space-between;
 }
 
-.Price-wrap .td1 {
+.table .td1 {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 80%;
   flex: 0 0 80%;
@@ -2010,7 +2109,7 @@ ul.foot li a:hover {
   padding-right: 10px;
 }
 
-.Price-wrap .td2 {
+.table .td2 {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 20%;
   flex: 0 0 20%;
@@ -2027,14 +2126,8 @@ ul.foot li a:hover {
   align-items: center;
 }
 
-.Price-wrap .tdB {
+.table .tdB {
   font-family: CeraPro-Bold;
-}
-
-.Price-wrap .hr {
-  height: 1px;
-  background: #3a576b;
-  margin: 10px 0 15px;
 }
 
 .Etapy {
@@ -2140,12 +2233,48 @@ ul.foot li a:hover {
 
 .Content-text h2 {
   font-family: CeraPro-Bold;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 21.6px;
   text-align: left;
   color: #000;
   margin-top: 10px;
   margin-bottom: 15px;
+}
+
+.Content-text h3 {
+  font-family: CeraPro-Bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+  color: #3c3c3b;
+  padding: 10px 0;
+}
+
+.Content-text ol {
+  margin-left: 20px;
+  padding: 15px 0;
+}
+
+.Content-text ol li {
+  font-family: CeraPro-Regular;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+  color: #3c3c3b;
+}
+
+.Content-text ul {
+  margin-left: 20px;
+  padding: 15px 0;
+}
+
+.Content-text ul li {
+  font-family: CeraPro-Regular;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+  color: #3c3c3b;
+  list-style: disc;
 }
 
 .Content-text p {
@@ -2224,6 +2353,66 @@ ul.foot li a:hover {
 
 .OurDela__info strong {
   font-family: CeraPro-Bold;
+  display: block;
+}
+
+.HeadBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border: 1px solid #2c80b8;
+  margin-bottom: 20px;
+}
+
+.HeadBlock__title {
+  width: 70%;
+  text-align: center;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.HeadBlock__title .hd {
+  font-family: CeraPro-Bold;
+  font-size: 24px;
+  line-height: 26px;
+  color: #2c80b8;
+  margin-bottom: 15px;
+}
+
+.HeadBlock__tags {
+  width: 28%;
+  padding: 20px;
+  background: #2c80b8;
+  font-family: CeraPro-Regular;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21.6px;
+  text-align: center;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.HeadBlock__tags .hd {
+  font-family: CeraPro-Bold;
+  margin-bottom: 10px;
   display: block;
 }
 
@@ -2475,6 +2664,9 @@ ul.foot li a:hover {
     width: 100%;
     text-align: center;
     margin-bottom: 10px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .Top-phone {
@@ -2550,6 +2742,10 @@ ul.foot li a:hover {
     width: 48%;
   }
 
+  .Forma1 .BtnSubmit {
+    padding: 40px 0;
+  }
+
   .FormaBig .hd {
     font-size: 18px;
     line-height: 22px;
@@ -2562,6 +2758,10 @@ ul.foot li a:hover {
 
   .FormaBig__e input {
     height: 37px;
+  }
+
+  .FormaBig .BtnSubmit {
+    padding: 40px 0;
   }
 
   .PracticE {
@@ -2644,6 +2844,44 @@ ul.foot li a:hover {
     line-height: 18px;
   }
 
+  .Firstscreen__text ol li {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .Firstscreen__text ul li {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .Uslugi2__item {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .Uslugi2__Img {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .Uslugi2__info {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    padding-top: 20px;
+  }
+
+  .Uslugi2__hd {
+    text-align: center;
+  }
+
   .Uslugi3__wrap {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -2667,6 +2905,9 @@ ul.foot li a:hover {
 
   .OurDela__text {
     width: 100%;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
   }
 
   .OurDela__text .hd {
@@ -2683,6 +2924,30 @@ ul.foot li a:hover {
     font-size: 16px;
     line-height: 18px;
     width: 100%;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .HeadBlock__title {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .HeadBlock__title .hd {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .HeadBlock__tags {
+    font-size: 16px;
+    line-height: 18px;
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
   }
 }
 
