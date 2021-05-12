@@ -2380,31 +2380,34 @@ ul.foot {
   .hd {
     font-family: CeraPro-Bold;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 21.6px;
-    text-align: center;
     color: #3a576b;
+    margin-top: 40px;
     @include max-s(768px)  {
-      font-size: 18px;
-      line-height: 21.6px;
+      font-size: 20px;
+      line-height: 21.6px; 
     }
   }
+
   &__link {
+
     ul {
       list-style: disc;
       li {
        
         a {
-          font-family: CeraPro-Regular;
+          font-family: 'CeraPro-Medium';
           font-size: 18px;
           line-height: 21.6px;
           text-align: left;
-          color: #1a4b6b;
+          color: #2c80b8;
           text-decoration: none; 
    
           &:hover {
             text-decoration: underline;
           }
+        }
       }
     }
   }
