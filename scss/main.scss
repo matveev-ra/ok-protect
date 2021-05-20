@@ -551,6 +551,7 @@ a.btn-callback {
       background: #fff;
     }
   }
+  
   span {
     font-family: CeraPro-Bold;
     font-size: 24px;
@@ -787,7 +788,11 @@ section {
   width: 100%;
   background: #80c2ed;
   padding: 40px 0;
-  margin-bottom: 90px;  
+  margin-bottom: 90px; 
+
+  &.Block3-White {
+    background: #fff;
+  }
 }
 
 .Reviews {
@@ -893,7 +898,111 @@ section {
         }
       }
     }
+
+  &.ReviewsE-white {
+    &+& {
+      border-top: 1.5px solid #3a576b;   
+    }
+    &+&:after {
+       background: url('../images/qute.jpg') left 0px no-repeat;
+    }
+  }  
+
+  &__Avatar-white {
+      
+    .name {
+      color: #3a576b;
+    }
+    .date {
+      color: #3a576b; 
+    }
+  }
+
+  &__text-white {
+    p {
+      color: #1d1d1b;
+    }
+  }
 }
+
+.ReviewsEW {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  position: relative;
+
+  @include max-s(500px)  {
+    flex-wrap: wrap;
+  }
+  
+  &+& {
+    border-top: 1.5px solid #3a576b;   
+    padding-top: 45px;
+    margin-top: 35px;
+  }
+
+  &+&:after {
+    content:"";
+    position: absolute;
+    top: -29px;
+    right: 15%;
+    background: url('../images/qute.jpg') left 0px no-repeat;
+    width: 61px;
+    height: 60px;
+  }
+
+  &__Avatar {
+    flex: 0 0 160px;
+    margin-right: 20px;
+    text-align: center;
+
+    @include max-s(500px)  {
+      flex: 1 1 100%;
+      margin-bottom: 20px;
+    }
+    
+    .img {
+      margin-bottom: 20px;
+      
+    }
+    .name {
+      font-family: CeraPro-Bold;
+      font-size: 18px;
+      line-height: 21.6px;
+      text-align: center;
+      color: #3a576b;
+    }
+    .date {
+      font-family: CeraPro-Medium Italic;
+      font-size: 18px;
+      line-height: 21.6px;
+      text-align: center;
+      color: #3a576b;
+    }
+  }
+
+  &__text {
+    flex: 1 1 auto;
+
+    @include max-s(500px)  {
+      flex: 1 1 100%;
+    }
+
+    p {
+      font-family: CeraPro-LightItalic;
+      font-size: 18px;
+      line-height: 21.6px;
+      text-align: left;
+      color: #1d1d1b;
+      @include max-s(500px)  {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+
 
 .All-link {
   text-align: right;
@@ -1537,8 +1646,10 @@ ul.foot {
 
 
 .Firstscreen {
-  margin-bottom: 70px;
-
+  margin-bottom: 70px; 
+  .in {
+    margin-bottom: 30px;
+  }
   &__imgbl {
     display: flex;
     flex-wrap: nowrap;
@@ -1908,37 +2019,51 @@ ul.foot {
 }
 
 .DocAbout {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  
+  @include max-s(992px)  {
+    width: 80%;
+  }
 
-  a {
-    border: 1px solid #2c80b8;
-    position: relative;
-    font-size: 0;
 
+
+
+  .owl-item {
     &:hover {
+      a {
+        .hover {
+          display: flex;
+        }
+      }
+    }
+
+    a {
+      border: 1px solid #2c80b8;
+      position: relative;
+      font-size: 0;
+      display: block;
+
       .hover {
-        display: flex;
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: #2c80b8;
+        opacity: 0.5;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 41px;
+        }
       }
     }
 
-    .hover {
-      display: none;
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      background: #2c80b8;
-      opacity: 0.5;
-      justify-content: center;
-      align-items: center;
-
-      img {
-        
-      }
-    }
   }
 }
 
@@ -2009,6 +2134,7 @@ ul.foot {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+
   @include max-s(992px)  {
     flex-wrap: wrap;
   }
@@ -2019,6 +2145,12 @@ ul.foot {
     flex-direction: column;
     justify-content: space-between;
 
+    @include max-s(992px)  {
+      width: 100%;
+      flex-direction:row-reverse;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
     
  
       &.bg1 { background: #80c2ed;}
@@ -2058,6 +2190,16 @@ ul.foot {
     color: #fff;
     height: 40px;
     padding: 5px 0 0 5px;
+
+    @include max-s(992px)  {
+      flex:0 0 40px;
+      
+      padding: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+    }
 
   }
 }
@@ -2156,7 +2298,7 @@ ul.foot {
   }
 
   &__text {
-    width: 70%;
+    width: 68%;
     text-align: center;
     padding: 20px;
 
@@ -2164,6 +2306,7 @@ ul.foot {
       width: 100%;
       order: 2;
     }
+
     .hd {
       font-family: CeraPro-Bold;
       font-weight: normal;
@@ -2177,6 +2320,7 @@ ul.foot {
       }
 
     }
+
     .desc {
       font-family: CeraPro-Regular;
       font-weight: normal;
@@ -2188,10 +2332,14 @@ ul.foot {
       line-height: 18px; 
       }
     }
+    .BtnMore {
+      width: 300px;
+      margin: 20px auto 0;
+    }
   }
 
   &__info {
-    width: 28%;
+    width: 30%;
     padding: 20px;
     background: #2c80b8;
     font-family: CeraPro-Regular;
@@ -2200,6 +2348,9 @@ ul.foot {
     line-height: 21.6px;
     text-align: center;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include max-s(768px)  {
       font-size: 16px;
@@ -2208,14 +2359,29 @@ ul.foot {
       order: 1;
     }
 
+    .in {
+ 
+    }
+
     .hd {
       font-family: CeraPro-Bold;
       margin-bottom: 10px;
       display: block;
     }
+    .who {
+      display: block;
+      font-style: italic;
+      margin-bottom: 5px;
+
+    }
     strong {
       font-family: CeraPro-Bold;
       display: block;
+    }
+    .date {
+      display: block;
+      padding-top: 20px;
+
     }
   }
 }

@@ -928,6 +928,10 @@ section .HDmain2 {
   margin-bottom: 90px;
 }
 
+.Block3.Block3-White {
+  background: #fff;
+}
+
 .Reviews {
   margin-bottom: 60px;
 }
@@ -1020,6 +1024,96 @@ section .HDmain2 {
   line-height: 21.6px;
   text-align: left;
   color: #fff;
+}
+
+.ReviewsE.ReviewsE-white + .ReviewsE.ReviewsE-white {
+  border-top: 1.5px solid #3a576b;
+}
+
+.ReviewsE.ReviewsE-white + .ReviewsE.ReviewsE-white:after {
+  background: url("../images/qute.jpg") left 0px no-repeat;
+}
+
+.ReviewsE__Avatar-white .name {
+  color: #3a576b;
+}
+
+.ReviewsE__Avatar-white .date {
+  color: #3a576b;
+}
+
+.ReviewsE__text-white p {
+  color: #1d1d1b;
+}
+
+.ReviewsEW {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+}
+
+.ReviewsEW + .ReviewsEW {
+  border-top: 1.5px solid #3a576b;
+  padding-top: 45px;
+  margin-top: 35px;
+}
+
+.ReviewsEW + .ReviewsEW:after {
+  content: "";
+  position: absolute;
+  top: -29px;
+  right: 15%;
+  background: url("../images/qute.jpg") left 0px no-repeat;
+  width: 61px;
+  height: 60px;
+}
+
+.ReviewsEW__Avatar {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 160px;
+  flex: 0 0 160px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.ReviewsEW__Avatar .img {
+  margin-bottom: 20px;
+}
+
+.ReviewsEW__Avatar .name {
+  font-family: CeraPro-Bold;
+  font-size: 18px;
+  line-height: 21.6px;
+  text-align: center;
+  color: #3a576b;
+}
+
+.ReviewsEW__Avatar .date {
+  font-family: CeraPro-Medium Italic;
+  font-size: 18px;
+  line-height: 21.6px;
+  text-align: center;
+  color: #3a576b;
+}
+
+.ReviewsEW__text {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.ReviewsEW__text p {
+  font-family: CeraPro-LightItalic;
+  font-size: 18px;
+  line-height: 21.6px;
+  text-align: left;
+  color: #1d1d1b;
 }
 
 .All-link {
@@ -1734,6 +1828,10 @@ ul.foot li a:hover {
   margin-bottom: 70px;
 }
 
+.Firstscreen .in {
+  margin-bottom: 30px;
+}
+
 .Firstscreen__imgbl {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2028,6 +2126,8 @@ ul.foot li a:hover {
 }
 
 .DocAbout {
+  width: 90%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2038,19 +2138,20 @@ ul.foot li a:hover {
   justify-content: space-between;
 }
 
-.DocAbout a {
-  border: 1px solid #2c80b8;
-  position: relative;
-  font-size: 0;
-}
-
-.DocAbout a:hover .hover {
+.DocAbout .owl-item:hover a .hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.DocAbout a .hover {
+.DocAbout .owl-item a {
+  border: 1px solid #2c80b8;
+  position: relative;
+  font-size: 0;
+  display: block;
+}
+
+.DocAbout .owl-item a .hover {
   display: none;
   position: absolute;
   top: 0;
@@ -2065,6 +2166,10 @@ ul.foot li a:hover {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.DocAbout .owl-item a .hover img {
+  width: 41px;
 }
 
 .Price {
@@ -2311,7 +2416,7 @@ ul.foot li a:hover {
 }
 
 .OurDela__text {
-  width: 70%;
+  width: 68%;
   text-align: center;
   padding: 20px;
 }
@@ -2333,8 +2438,13 @@ ul.foot li a:hover {
   color: #1d1d1b;
 }
 
+.OurDela__text .BtnMore {
+  width: 300px;
+  margin: 20px auto 0;
+}
+
 .OurDela__info {
-  width: 28%;
+  width: 30%;
   padding: 20px;
   background: #2c80b8;
   font-family: CeraPro-Regular;
@@ -2343,6 +2453,15 @@ ul.foot li a:hover {
   line-height: 21.6px;
   text-align: center;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .OurDela__info .hd {
@@ -2351,9 +2470,20 @@ ul.foot li a:hover {
   display: block;
 }
 
+.OurDela__info .who {
+  display: block;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
 .OurDela__info strong {
   font-family: CeraPro-Bold;
   display: block;
+}
+
+.OurDela__info .date {
+  display: block;
+  padding-top: 20px;
 }
 
 .HeadBlock {
@@ -2634,9 +2764,41 @@ ul.foot li a:hover {
     flex: 0 1 47.3%;
   }
 
+  .DocAbout {
+    width: 80%;
+  }
+
   .EtapyWrap {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+  }
+
+  .EtapyWrap__item {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .EtapyWrap__numb {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 40px;
+    flex: 0 0 40px;
+    padding: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
@@ -3085,6 +3247,29 @@ ul.foot li a:hover {
   }
 
   .ReviewsE__text p {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .ReviewsEW {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .ReviewsEW__Avatar {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  .ReviewsEW__text {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+  }
+
+  .ReviewsEW__text p {
     font-size: 16px;
     line-height: 18px;
   }
